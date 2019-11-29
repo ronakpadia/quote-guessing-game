@@ -3,9 +3,8 @@ from bs4 import BeautifulSoup
 from random import choice
 import csv
 
-
-
-
+# Will scrape quotes from "quotes.toscrape.com".
+# Will check for "quote_data.csv" and create it, if not found.
 
 def scraper():
 	url = "http://quotes.toscrape.com/"
@@ -53,20 +52,12 @@ def csv_reader():
 			data.append(row)
 	return data
 
-
 def main():
 	try:
 		quotes = csv_reader()
 	except FileNotFoundError:
 		csv_writer(scraper())
 	game(csv_reader())
-
-
-
-
-
-
-
 
 def game(data):
 	reply = "y"
@@ -101,8 +92,4 @@ def game(data):
 				print("Sorry, you've run out of guesses! The author's name is {}\n".format(guess[1]))
 				break
 
-
 main()
-
-
-
