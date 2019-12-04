@@ -84,10 +84,10 @@ def game(data):
 			if no_of_guess == 3:
 				print("Here a hint: The author was born on {} {}\n".format(author_born_date, author_born_place))
 			if no_of_guess == 2:
-				print("Heres another hint: The first initial of the author is {}\n".format(guess[1][0]))
+				print("Heres another hint: The first initial of the author's name is {}\n".format(guess[1][0]))
 			if no_of_guess == 1:
 				name_split = guess[1].split()
-				print("Heres one more hint: The second inital of the author is {}\n".format(name_split[1][0]))
+				print("Heres one more hint: The second inital of the author's surname is {}\n".format(name_split[1][0]))
 			if no_of_guess == 0:
 				print("Sorry, you've run out of guesses! The author's name is {}\n".format(guess[1]))
 				break
